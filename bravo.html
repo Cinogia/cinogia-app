@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BRAVO</title>
+    <link rel="shortcut icon" type="imagex/png" href="images/isologos.png">
+  <meta name="description" content="BRAVO" />
+  <link rel="stylesheet" href="bravo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.css" />
+</head>
+<body class="theme-cream">
+  <!-- FIXED HERO/BANNER -->
+  <header id="hero" class="hero fixed">
+    <nav class="nav container">
+      <a class="brand" href="#">CINOGIA<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#features">Serviços</a></li>
+        <li><a href="#how">Como Funciona</a></li>
+        <li><a href="#download">Baixe</a></li>
+        <li><a class="cta" href="#contact">Entrar em contato</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    </nav>
+
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <h1 class="title">BRAVO — uma rede que abraça quem chega</h1>
+        <p class="subtitle">Conectando imigrantes ao Brasil: apoio local, recursos práticos, eventos e uma comunidade acolhedora.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#download">Baixar o app</a>
+          <a class="btn btn-outline" href="#how">Como funciona</a>
+        </div>
+        <ul class="trust">
+          <li>Comunidade ativa</li>
+          <li>Eventos presenciais</li>
+          <li>Assistência local</li>
+        </ul>
+      </div>
+
+      <div class="hero-phone" aria-hidden="true">
+        <!-- A stylized 3D-ish phone mockup with layers for parallax -->
+        <div class="phone-layer parallax" data-depth="0.16">
+          <img src="images/tela3d.png" alt="people connecting" />
+        </div>
+        <div class="phone-shadow"></div>
+      </div>
+    </div>
+
+    <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,30 C360,90 1080,0 1440,30 L1440 100 L0 100 Z"></path>
+    </svg>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="panel container reveal">
+      <div class="panel-grid">
+        <div class="panel-text">
+          <h2>Nossa missão</h2>
+          <p>BRAVO foi criado pela CINOGIA para reduzir a solidão e a incerteza dos imigrantes que chegam ao Brasil. Oferecemos uma plataforma com pessoas locais dispostas a ajudar, eventos comunitários e serviços práticos — tudo pensado para que quem chega se sinta em casa.</p>
+          <p class="highlight">Acolhimento local • Suporte prático • Integração cultural</p>
+          <a class="btn" href="#features">Conheça os serviços</a>
+        </div>
+
+        <div class="panel-media parallax" data-depth="0.08">
+          <figure class="media-card">
+            <img src="images/bannerbravo.jpg" alt="community support" />
+            <figcaption>Comunidade local em ação</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / SERVICES -->
+    <section id="features" class="panel-alt reveal">
+      <div class="container">
+        <h2>Serviços que transformam chegadas em começos confiantes</h2>
+
+        <div class="features-grid">
+          <article class="feature card anim-card">
+            <div class="icon">🤝</div>
+            <h3>Acolhimento Local</h3>
+            <p>Encontre voluntários locais, grupos de apoio e mentores que falam sua língua. Serviços de recepção e orientação prática.</p>
+          </article>
+
+          <article class="feature card anim-card">
+            <div class="icon">📅</div>
+            <h3>Eventos e Oficinas</h3>
+            <p>Calendário de eventos locais: oficinas, rodas de conversa, aulas de português e integração cultural.</p>
+          </article>
+
+          <article class="feature card anim-card">
+            <div class="icon">🗺️</div>
+            <h3>Mapa de Serviços</h3>
+            <p>Mapa interativo com serviços essenciais: saúde, educação, assistência jurídica, moradia e empregos.</p>
+          </article>
+
+          <article class="feature card anim-card">
+            <div class="icon">🔒</div>
+            <h3>Segurança e Privacidade</h3>
+            <p>Perfil verificado, canais seguros para compartilhar informações e suporte moderado pela comunidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX SCENE -->
+    <section class="parallax-scene" aria-hidden="true">
+      <div class="parallax-layer" data-depth="0.02"></div>
+      <div class="parallax-layer" data-depth="0.06"></div>
+      <div class="parallax-layer" data-depth="0.12"></div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="panel container reveal">
+      <h2>Como funciona</h2>
+      <div class="steps-grid">
+        <div class="step card">
+          <div class="step-number">1</div>
+          <h4>Crie um perfil</h4>
+          <p>Cadastre-se em poucos minutos e indique suas necessidades — idioma de origem, cidade e o que procura.</p>
+        </div>
+        <div class="step card">
+          <div class="step-number">2</div>
+          <h4>Conecte-se com locais</h4>
+          <p>Veja perfis verificados de voluntários e grupos com interesses semelhantes.</p>
+        </div>
+        <div class="step card">
+          <div class="step-number">3</div>
+          <h4>Participe de eventos</h4>
+          <p>Encontre oficinas e encontros para aprender, socializar e receber suporte prático.</p>
+        </div>
+        <div class="step card">
+          <div class="step-number">4</div>
+          <h4>Seja parte da comunidade</h4>
+          <p>Crie laços, receba apoio e, quando puder, ajude outras pessoas que chegam.</p>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner reveal">
+      <div class="container cta-grid">
+        <div>
+          <h2>Pronto para transformar chegadas em abraços?</h2>
+          <p>Baixe o BRAVO e faça parte da rede de acolhimento que conecta vidas ao Brasil.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-large btn-primary" href="#download">Baixar no Google Play</a>
+          <a class="btn btn-large btn-outline" href="#download">Baixar no App Store</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials container reveal">
+      <h2>Depoimentos</h2>
+      <div class="test-grid">
+        <blockquote class="test-card">
+          <p>"Cheguei sem saber por onde começar — encontrei no BRAVO um grupo que me ajudou a abrir minha conta e me apresentou pessoas que hoje são amigas."</p>
+          <cite>— María, Venezuela</cite>
+        </blockquote>
+
+        <blockquote class="test-card">
+          <p>"Voluntariar no BRAVO me permitiu conhecer pessoas incríveis e ajudar com o que sei — é recompensador."</p>
+          <cite>— João, São Paulo</cite>
+        </blockquote>
+
+        <blockquote class="test-card">
+          <p>"As oficinas de português e trabalho me deram confiança para procurar emprego e me integrar."</p>
+          <cite>— Amina, Senegal</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section class="gallery container reveal">
+      <h2>Como é viver o BRAVO</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item parallax" data-depth="0.07"><img src="images/tbm1.jpg" alt="workshop" /></figure>
+        <figure class="gallery-item parallax" data-depth="0.1"><img src="images/tbm2.jpg" alt="meeting" /></figure>
+        <figure class="gallery-item parallax" data-depth="0.05"><img src="images/tbm3.jpg" alt="coffee" /></figure>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD / SIGNUP SECTION -->
+    <section id="download" class="download-panel reveal">
+      <div class="container">
+        <div class="download-grid">
+          <div>
+            <h2>Faça parte — é grátis</h2>
+            <p>Crie seu perfil, participe de eventos e encontre suporte local. BRAVO foi criado para conectar pessoas.</p>
+            <ul class="bullets">
+              <li>Cadastro simples</li>
+              <li>Perfis verificados</li>
+              <li>Mapas e eventos locais</li>
+            </ul>
+            <div class="download-buttons">
+              <a class="btn btn-primary" href="#">Google Play</a>
+              <a class="btn btn-outline" href="#">App Store</a>
+            </div>
+          </div>
+
+          <div class="download-art">
+            <img src="images/bannerrodape.jpg" alt="download app mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER CTA -->
+    <section id="contact" class="contact-panel container reveal">
+      <h2>Fale com a CINOGIA</h2>
+      <p>Tem uma ideia, quer colaborar ou quer que a BRAVO chegue à sua cidade? Entre em contato.</p>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e‑mail" required />
+        </div>
+        <div class="form-row">
+          <select name="subject">
+            <option>Quero colaborar</option>
+            <option>Quero ser voluntário</option>
+            <option>Quero apoio local</option>
+          </select>
+        </div>
+        <textarea name="message" rows="6" placeholder="Escreva sua mensagem..."></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#">CINOGIA</a>
+        <p>BRAVO — rede de acolhimento e serviços para imigrantes.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#features">Serviços</a></li>
+          <li><a href="#how">Como funciona</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p>contato@cinogia.org</p>
+        <p>+55 (11) 0000-0000</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© CINOGIA 2025 — Todos os direitos reservados</small>
+    </div>
+  </footer>
+
+  <!-- Decorative & Accessibility elements -->
+  <div id="mouse-light" aria-hidden="true"></div>
+
+  <script src="bravo.js" defer></script>
+  <!-- Small inline script for critical UX without exposing all site logic -->
+  <script>
+    
+    // Navegação simples: scroll suave
+    document.addEventListener('click', function(e){
+      const a = e.target.closest('a[href^="#"]');
+      if(!a) return;
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+
+    // Acessibilidade: fechar menu com ESC
+    document.addEventListener('keydown', function(ev){
+      if(ev.key === 'Escape') document.documentElement.classList.remove('nav-open');
+    });
+
+    // Progressive enhancement: add class when JS enabled
+    document.documentElement.classList.add('js');
+  </script>
+  <!-- VLibras -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>

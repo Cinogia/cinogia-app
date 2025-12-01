@@ -1,0 +1,504 @@
+/* =========================
+   CINOGIA WEBSITE DESIGN
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 70px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
+  filter: brightness(1.2);
+}
+
+.nav a {
+  color: #eee;
+  text-decoration: none;
+  margin-left: 28px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(90deg, #00ff0d, #26ff26);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  color: #15ff00;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   HERO / CAROUSEL
+   ========================= */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 1px;
+}
+
+.carousel {
+  position: relative;
+  height: 190%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.0s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 600px;
+  z-index: 3;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.caption h1 {
+  font-size: 3.5rem;
+  color: #33ff00;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 12px rgba(21, 255, 0, 0.5);
+}
+
+.caption p {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Setas do Carrossel */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00ff00;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background: #09ff00;
+  color: #fff;
+}
+
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+/* =========================
+   SEÇÕES GERAIS
+   ========================= */
+section {
+  padding: 120px 80px;
+}
+
+section h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(9, 255, 0, 0.4);
+}
+
+/* =========================
+   SOBRE
+   ========================= */
+.about {
+  background: linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
+  text-align: center;
+  border-top: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.about p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+}
+
+/* =========================
+   SERVIÇOS
+   ========================= */
+.services {
+  background: radial-gradient(circle at 20% 30%, rgba(0, 255, 13, 0.15), transparent 70%);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: rgba(18, 18, 18, 0.8);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(30, 255, 0, 0.1), transparent 60%);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.service-card h3 {
+  color: #00ff00;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 25px rgba(30, 255, 0, 0.2);
+}
+
+/* =========================
+   PROJETOS
+   ========================= */
+.projects {
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 13, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(9, 255, 0, 0.9);
+  height: 0;
+  overflow: hidden;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+  height: 100%;
+}
+
+/* =========================
+   BRAVO SECTION
+   ========================= */
+.bravo-section {
+  background: linear-gradient(135deg, #0a0a0a, #151515 80%);
+  border-top: 1px solid rgba(30, 255, 0, 0.3);
+}
+
+.bravo-section span {
+  color: #51ff26;
+}
+
+.bravo-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.bravo-text {
+  flex: 1 1 400px;
+}
+
+.bravo-text h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.bravo-text p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.bravo-image {
+  flex: 1 1 400px;
+}
+
+.bravo-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.2);
+}
+
+.btn {
+  background: linear-gradient(90deg, #09ff00, #26ff38);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(60, 255, 0, 0.5);
+}
+
+/* =========================
+   CONTATO
+   ========================= */
+.contact {
+  text-align: center;
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+}
+
+.contact p {
+  color: #ccc;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #151515;
+  border: 1px solid rgba(51, 255, 0, 0.3);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  resize: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1eff00;
+  outline: none;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: #0a0a0a;
+  color: #777777;
+  border-top: 1px solid rgba(21, 255, 0, 0.2);
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: #00ff00;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  opacity: 0.7;
+}
+
+/* =========================
+   ANIMAÇÕES SCROLL / FADE
+   ========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+@media (max-width: 1024px) {
+  .caption h1 {
+    font-size: 2.8rem;
+  }
+  .bravo-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  section {
+    padding: 80px 25px;
+  }
+
+  .caption {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .caption h1 {
+    font-size: 2rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .nav a {
+    margin-left: 12px;
+  }
+}
