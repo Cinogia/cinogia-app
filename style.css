@@ -357,7 +357,7 @@ section h2 {
 
 .btn {
   background: linear-gradient(90deg, #09ff00, #26ff38);
-  color: #fff;
+  color: #000000ff;
   border: none;
   padding: 12px 28px;
   border-radius: 25px;
